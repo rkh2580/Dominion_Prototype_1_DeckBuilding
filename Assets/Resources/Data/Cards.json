@@ -1,0 +1,211 @@
+{
+  "cards": [
+    {
+      "id": "copper",
+      "cardName": "동화",
+      "cardType": 0,
+      "description": "1 골드",
+      "treasureGrade": 1,
+      "goldValue": 1,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 0
+    },
+    {
+      "id": "silver",
+      "cardName": "은화",
+      "cardType": 0,
+      "description": "2 골드",
+      "treasureGrade": 2,
+      "goldValue": 2,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 0
+    },
+    {
+      "id": "gold_coin",
+      "cardName": "금화",
+      "cardType": 0,
+      "description": "4 골드",
+      "treasureGrade": 3,
+      "goldValue": 4,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 0
+    },
+    {
+      "id": "emerald",
+      "cardName": "에메랄드",
+      "cardType": 0,
+      "description": "7 골드",
+      "treasureGrade": 4,
+      "goldValue": 7,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 0
+    },
+    {
+      "id": "sapphire",
+      "cardName": "사파이어",
+      "cardType": 0,
+      "description": "12 골드",
+      "treasureGrade": 5,
+      "goldValue": 12,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 0
+    },
+    {
+      "id": "ruby",
+      "cardName": "루비",
+      "cardType": 0,
+      "description": "20 골드",
+      "treasureGrade": 6,
+      "goldValue": 20,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 0
+    },
+    {
+      "id": "diamond",
+      "cardName": "다이아몬드",
+      "cardType": 0,
+      "description": "35 골드",
+      "treasureGrade": 7,
+      "goldValue": 35,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 0
+    },
+    {
+      "id": "labor",
+      "cardName": "노동",
+      "cardType": 1,
+      "description": "+3 골드",
+      "treasureGrade": 0,
+      "goldValue": 0,
+      "rarity": 0,
+      "jobPools": [0],
+      "effects": [
+        {
+          "effectType": 2,
+          "value": 3,
+          "floatValue": 0,
+          "targetType": 0,
+          "maxTargets": 0,
+          "createGrade": 0,
+          "duration": 0,
+          "successChance": 0,
+          "successValue": 0,
+          "failValue": 0
+        }
+      ],
+      "pollutionType": 0
+    },
+    {
+      "id": "explore",
+      "cardName": "탐색",
+      "cardType": 1,
+      "description": "+2 카드",
+      "treasureGrade": 0,
+      "goldValue": 0,
+      "rarity": 0,
+      "jobPools": [1],
+      "effects": [
+        {
+          "effectType": 0,
+          "value": 2,
+          "floatValue": 0,
+          "targetType": 0,
+          "maxTargets": 0,
+          "createGrade": 0,
+          "duration": 0,
+          "successChance": 0,
+          "successValue": 0,
+          "failValue": 0
+        }
+      ],
+      "pollutionType": 0
+    },
+    {
+      "id": "encourage",
+      "cardName": "독려",
+      "cardType": 1,
+      "description": "+2 액션",
+      "treasureGrade": 0,
+      "goldValue": 0,
+      "rarity": 0,
+      "jobPools": [1],
+      "effects": [
+        {
+          "effectType": 1,
+          "value": 2,
+          "floatValue": 0,
+          "targetType": 0,
+          "maxTargets": 0,
+          "createGrade": 0,
+          "duration": 0,
+          "successChance": 0,
+          "successValue": 0,
+          "failValue": 0
+        }
+      ],
+      "pollutionType": 0
+    },
+    {
+      "id": "debt",
+      "cardName": "부채",
+      "cardType": 2,
+      "description": "손패만 차지 (플레이 불가)",
+      "treasureGrade": 0,
+      "goldValue": 0,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 0
+    },
+    {
+      "id": "curse",
+      "cardName": "저주",
+      "cardType": 2,
+      "description": "턴 종료 시 -2 골드",
+      "treasureGrade": 0,
+      "goldValue": 0,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 1
+    },
+    {
+      "id": "disease",
+      "cardName": "질병",
+      "cardType": 2,
+      "description": "해당 유닛 강화 불가",
+      "treasureGrade": 0,
+      "goldValue": 0,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 2
+    },
+    {
+      "id": "damage",
+      "cardName": "파손",
+      "cardType": 2,
+      "description": "이번 턴 드로우 -1",
+      "treasureGrade": 0,
+      "goldValue": 0,
+      "rarity": 0,
+      "jobPools": [],
+      "effects": [],
+      "pollutionType": 3
+    }
+  ]
+}
