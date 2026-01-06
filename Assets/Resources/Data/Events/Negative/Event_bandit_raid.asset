@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222b622c22309ca4baff3e0ff19c4fc0, type: 3}
+  m_Name: Event_bandit_raid
+  m_EditorClassIdentifier: Assembly-CSharp::DeckBuildingEconomy.Data.EventSO
+  eventId: bandit_raid
+  eventName: "\uB3C4\uC801 \uC2B5\uACA9"
+  category: 2
+  description: "\uB3C4\uC801\uB4E4\uC774 \uC2B5\uACA9\uD588\uC2B5\uB2C8\uB2E4! \uBCF4\uC720
+    \uACE8\uB4DC\uC758 20%\uB97C \uC783\uC2B5\uB2C8\uB2E4."
+  triggerConditions:
+  - type: 1
+    comparison: 4
+    value: 5
+  effects:
+  - conditions: []
+    effects:
+    - type: 57
+      value: 20
+      dynamicValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      target: 0
+      maxTargets: 0
+      createGrade: 0
+      duration: 0
+      successChance: 0
+      successValueInt: 0
+      successValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      failValueInt: 0
+      failValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      cardId: 
+      cardRarity: 0
+      cardJobPool: 0
+    elseEffects: []
+  choices: []

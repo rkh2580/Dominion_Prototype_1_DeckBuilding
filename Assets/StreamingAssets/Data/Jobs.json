@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  
+  "jobs": [
+    {
+      "id": "Pawn",
+      "enumValue": 0,
+      "displayName": "폰",
+      "description": "경제/생산 특화. 재화를 효율적으로 관리한다.",
+      "baseCombatPower": 10,
+      "cardPools": {
+        "basic": ["labor", "settle", "mint"],
+        "advanced": ["ledger", "appraise", "smelt"],
+        "rare": ["philosophers_stone"]
+      }
+    },
+    {
+      "id": "Knight",
+      "enumValue": 1,
+      "displayName": "나이트",
+      "description": "드로우/도박 특화. 위험을 감수하고 큰 보상을 노린다.",
+      "baseCombatPower": 30,
+      "cardPools": {
+        "basic": ["explore", "encourage", "gamble"],
+        "advanced": ["all_in", "wheel_of_fortune"],
+        "rare": ["jackpot"]
+      }
+    },
+    {
+      "id": "Bishop",
+      "enumValue": 2,
+      "displayName": "비숍",
+      "description": "덱 관리/정화 특화. 오염을 제거하고 덱을 정화한다.",
+      "baseCombatPower": 15,
+      "cardPools": {
+        "basic": ["incinerate", "purify", "meditation"],
+        "advanced": ["exorcism", "blessing"],
+        "rare": ["miracle"]
+      }
+    },
+    {
+      "id": "Rook",
+      "enumValue": 3,
+      "displayName": "룩",
+      "description": "방어/안정 특화. 꾸준한 수입과 방어를 담당한다.",
+      "baseCombatPower": 25,
+      "cardPools": {
+        "basic": ["stockpile", "fortify", "patrol"],
+        "advanced": ["liquidate", "barricade"],
+        "rare": ["fortress"]
+      }
+    },
+    {
+      "id": "Queen",
+      "enumValue": 4,
+      "displayName": "퀸",
+      "description": "만능/복합. 모든 영역에서 뛰어난 능력을 발휘한다.",
+      "baseCombatPower": 35,
+      "cardPools": {
+        "basic": ["command", "inspire"],
+        "advanced": ["royal_decree", "grand_strategy"],
+        "rare": ["sovereignty"]
+      }
+    }
+  ]
+}

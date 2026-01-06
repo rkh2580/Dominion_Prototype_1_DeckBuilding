@@ -1,0 +1,1494 @@
+{
+  "_version": "2.1",
+  "_description": "통합 효과 시스템 - ConditionalEffect[] 구조 (한글 복원)",
+  "cards": [
+    {
+      "id": "copper",
+      "cardName": "동화",
+      "cardType": 0,
+      "description": "1 골드",
+      "treasureGrade": 1,
+      "goldValue": 1,
+      "effects": []
+    },
+    {
+      "id": "silver",
+      "cardName": "은화",
+      "cardType": 0,
+      "description": "2 골드",
+      "treasureGrade": 2,
+      "goldValue": 2,
+      "effects": []
+    },
+    {
+      "id": "gold_coin",
+      "cardName": "금화",
+      "cardType": 0,
+      "description": "4 골드",
+      "treasureGrade": 3,
+      "goldValue": 4,
+      "effects": []
+    },
+    {
+      "id": "emerald",
+      "cardName": "에메랄드",
+      "cardType": 0,
+      "description": "7 골드",
+      "treasureGrade": 4,
+      "goldValue": 7,
+      "effects": []
+    },
+    {
+      "id": "sapphire",
+      "cardName": "사파이어",
+      "cardType": 0,
+      "description": "12 골드",
+      "treasureGrade": 5,
+      "goldValue": 12,
+      "effects": []
+    },
+    {
+      "id": "ruby",
+      "cardName": "루비",
+      "cardType": 0,
+      "description": "20 골드",
+      "treasureGrade": 6,
+      "goldValue": 20,
+      "effects": []
+    },
+    {
+      "id": "diamond",
+      "cardName": "다이아몬드",
+      "cardType": 0,
+      "description": "35 골드",
+      "treasureGrade": 7,
+      "goldValue": 35,
+      "effects": []
+    },
+    {
+      "id": "debt",
+      "cardName": "부채",
+      "cardType": 2,
+      "description": "손패만 차지",
+      "effects": []
+    },
+    {
+      "id": "curse",
+      "cardName": "저주",
+      "cardType": 2,
+      "description": "턴 종료 시 -2 골드",
+      "pollutionType": 1,
+      "effects": []
+    },
+    {
+      "id": "disease",
+      "cardName": "질병",
+      "cardType": 2,
+      "description": "해당 유닛 강화 불가",
+      "pollutionType": 2,
+      "effects": []
+    },
+    {
+      "id": "damage",
+      "cardName": "파손",
+      "cardType": 2,
+      "description": "이번 턴 드로우 -1",
+      "pollutionType": 3,
+      "effects": []
+    },
+    {
+      "id": "labor",
+      "cardName": "노동",
+      "cardType": 1,
+      "description": "+3 골드",
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 2,
+              "value": 3,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mine",
+      "cardName": "광산",
+      "cardType": 1,
+      "description": "+5 골드",
+      "rarity": 1,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 2,
+              "value": 5,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gold_vein",
+      "cardName": "금맥",
+      "cardType": 1,
+      "description": "+8 골드",
+      "rarity": 2,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 2,
+              "value": 8,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "settle",
+      "cardName": "결산",
+      "cardType": 1,
+      "description": "재화 1장 정산",
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 6,
+              "value": 0,
+              "target": 3,
+              "maxTargets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ledger",
+      "cardName": "장부 정리",
+      "cardType": 1,
+      "description": "재화 최대 3장 정산",
+      "rarity": 1,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 6,
+              "value": 0,
+              "target": 3,
+              "maxTargets": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mint",
+      "cardName": "주조",
+      "cardType": 1,
+      "description": "은화 생성 (임시)",
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 3,
+              "value": 1,
+              "target": 0,
+              "createGrade": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smelt",
+      "cardName": "제련",
+      "cardType": 1,
+      "description": "금화 생성 (임시)",
+      "rarity": 1,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 3,
+              "value": 1,
+              "target": 0,
+              "createGrade": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gem_cutting",
+      "cardName": "보석 세공",
+      "cardType": 1,
+      "description": "에메랄드 생성 (임시)",
+      "rarity": 2,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 3,
+              "value": 1,
+              "target": 0,
+              "createGrade": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "polish",
+      "cardName": "연마",
+      "cardType": 1,
+      "description": "재화 1장 이번 턴 +1등급",
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 4,
+              "value": 1,
+              "target": 3,
+              "maxTargets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alchemy",
+      "cardName": "연금술",
+      "cardType": 1,
+      "description": "재화 모두 이번 턴 +1등급",
+      "rarity": 1,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 4,
+              "value": 1,
+              "target": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "philosophers_stone",
+      "cardName": "현자의 돌",
+      "cardType": 1,
+      "description": "재화 1장 영구 +1등급",
+      "rarity": 3,
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 5,
+              "value": 1,
+              "target": 3,
+              "maxTargets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "great_transformation",
+      "cardName": "대변환",
+      "cardType": 1,
+      "description": "재화 모두 영구 +1등급",
+      "rarity": 4,
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 5,
+              "value": 1,
+              "target": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "investment",
+      "cardName": "투자",
+      "cardType": 1,
+      "description": "이번 턴 골드 +50%",
+      "rarity": 1,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 7,
+              "value": 0,
+              "target": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 1.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "golden_age",
+      "cardName": "황금기",
+      "cardType": 1,
+      "description": "이번 턴 골드 2배",
+      "rarity": 2,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 7,
+              "value": 0,
+              "target": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 2.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "festival",
+      "cardName": "축제",
+      "cardType": 1,
+      "description": "+2 액션, +2 골드",
+      "rarity": 1,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 1,
+              "value": 2,
+              "target": 0
+            },
+            {
+              "type": 2,
+              "value": 2,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treasure_vault",
+      "cardName": "보물창고",
+      "cardType": 1,
+      "description": "+1 액션, +1 카드, +2 골드",
+      "rarity": 1,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 0,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 2,
+              "value": 2,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore",
+      "cardName": "탐색",
+      "cardType": 1,
+      "description": "+2 카드",
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 2,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scout",
+      "cardName": "정찰",
+      "cardType": 1,
+      "description": "+3 카드, +1 액션",
+      "rarity": 1,
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 3,
+              "target": 0
+            },
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expedition",
+      "cardName": "원정대",
+      "cardType": 1,
+      "description": "+4 카드, +1 액션",
+      "rarity": 2,
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 4,
+              "target": 0
+            },
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "encourage",
+      "cardName": "독려",
+      "cardType": 1,
+      "description": "+2 액션",
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 1,
+              "value": 2,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobilization",
+      "cardName": "총동원",
+      "cardType": 1,
+      "description": "+3 액션, +1 카드",
+      "rarity": 1,
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 1,
+              "value": 3,
+              "target": 0
+            },
+            {
+              "type": 0,
+              "value": 1,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gamble",
+      "cardName": "도박",
+      "cardType": 1,
+      "description": "50%: +10골드, 50%: -5골드",
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 12,
+              "value": 0,
+              "target": 0,
+              "successChance": 50,
+              "successValueInt": 10,
+              "failValueInt": -5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adventure",
+      "cardName": "모험",
+      "cardType": 1,
+      "description": "덱 3장 공개, 재화→손패",
+      "rarity": 1,
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 13,
+              "value": 3,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jackpot",
+      "cardName": "대박",
+      "cardType": 1,
+      "description": "1~6 주사위 × 5 골드",
+      "rarity": 1,
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [
+            {
+              "type": 0,
+              "comparison": 0,
+              "value": 0
+            }
+          ],
+          "effects": [
+            {
+              "type": 2,
+              "target": 0,
+              "value": 6,
+              "dynamicValue": {
+                "source": 41,
+                "baseValue": 6,
+                "multiplier": 5.0,
+                "min": 0,
+                "max": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel_of_fortune",
+      "cardName": "운명의 수레바퀴",
+      "cardType": 1,
+      "description": "덱 셔플, 덱탑 재화면 ×3골드",
+      "rarity": 1,
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [
+            {
+              "type": 0,
+              "comparison": 0,
+              "value": 0
+            }
+          ],
+          "effects": [
+            {
+              "type": 23,
+              "target": 0,
+              "value": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 1.0,
+                "min": 0,
+                "max": 0
+              }
+            }
+          ]
+        },
+        {
+          "conditions": [
+            {
+              "type": 20,
+              "comparison": 0,
+              "value": 0
+            }
+          ],
+          "effects": [
+            {
+              "type": 2,
+              "target": 0,
+              "value": 0,
+              "dynamicValue": {
+                "source": 30,
+                "baseValue": 0,
+                "multiplier": 3.0,
+                "min": 0,
+                "max": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "all_in",
+      "cardName": "올인",
+      "cardType": 1,
+      "description": "골드 50% 소모, 80% 2배반환",
+      "rarity": 2,
+      "jobPools": [
+        1
+      ],
+      "effects": [
+        {
+          "conditions": [
+            {
+              "type": 1,
+              "comparison": 4,
+              "value": 10
+            }
+          ],
+          "effects": [
+            {
+              "type": 12,
+              "target": 0,
+              "value": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 1.0,
+                "min": 0,
+                "max": 0
+              },
+              "successChance": 80,
+              "successValueInt": 50,
+              "successValue": {
+                "source": 21,
+                "baseValue": 50,
+                "multiplier": 1.0
+              },
+              "failValueInt": 50,
+              "failValue": {
+                "source": 21,
+                "baseValue": 50,
+                "multiplier": -1.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "incinerate",
+      "cardName": "소각",
+      "cardType": 1,
+      "description": "카드 1장 소멸",
+      "jobPools": [
+        2
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 9,
+              "value": 0,
+              "target": 2,
+              "maxTargets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "purify",
+      "cardName": "정화",
+      "cardType": 1,
+      "description": "오염 1장 소멸",
+      "jobPools": [
+        2
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 10,
+              "value": 0,
+              "target": 4,
+              "maxTargets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library",
+      "cardName": "서고",
+      "cardType": 1,
+      "description": "+1 액션, 손패 7장까지 드로우",
+      "rarity": 1,
+      "jobPools": [
+        2
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 17,
+              "value": 7,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mass_incinerate",
+      "cardName": "대청소",
+      "cardType": 1,
+      "description": "카드 최대 3장 소멸",
+      "rarity": 1,
+      "jobPools": [
+        2
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 9,
+              "value": 0,
+              "target": 2,
+              "maxTargets": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "worship",
+      "cardName": "예배",
+      "cardType": 1,
+      "description": "오염 1장 소멸, +2 카드",
+      "rarity": 1,
+      "jobPools": [
+        2
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 10,
+              "value": 0,
+              "target": 4,
+              "maxTargets": 1
+            },
+            {
+              "type": 0,
+              "value": 2,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accountant",
+      "cardName": "회계사",
+      "cardType": 1,
+      "description": "재화 2장 정산, 장수만큼 드로우",
+      "rarity": 1,
+      "jobPools": [
+        2
+      ],
+      "effects": [
+        {
+          "conditions": [
+            {
+              "type": 0,
+              "comparison": 0,
+              "value": 0
+            }
+          ],
+          "effects": [
+            {
+              "type": 6,
+              "target": 3,
+              "value": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 1.0,
+                "min": 0,
+                "max": 0
+              },
+              "maxTargets": 2
+            },
+            {
+              "type": 0,
+              "target": 0,
+              "value": 0,
+              "dynamicValue": {
+                "source": 10,
+                "baseValue": 0,
+                "multiplier": 1.0,
+                "min": 0,
+                "max": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blessing",
+      "cardName": "축복",
+      "cardType": 1,
+      "description": "+2 카드, +1 액션, +3 골드",
+      "rarity": 2,
+      "jobPools": [
+        2
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 2,
+              "target": 0
+            },
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 2,
+              "value": 3,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stockpile",
+      "cardName": "비축",
+      "cardType": 1,
+      "description": "+3 골드, 다음 턴 +3 골드",
+      "jobPools": [
+        3
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 2,
+              "value": 3,
+              "target": 0
+            },
+            {
+              "type": 14,
+              "value": 3,
+              "target": 0,
+              "duration": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "savings",
+      "cardName": "저축",
+      "cardType": 1,
+      "description": "이번 턴 골드 +20%",
+      "rarity": 1,
+      "jobPools": [
+        3
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 7,
+              "value": 0,
+              "target": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 1.2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "barrier",
+      "cardName": "방벽",
+      "cardType": 1,
+      "description": "+1 액션, 오염 효과 무시",
+      "rarity": 1,
+      "jobPools": [
+        3
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 18,
+              "value": 0,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bastion",
+      "cardName": "보루",
+      "cardType": 1,
+      "description": "+2 카드, 오염 1장 덱 아래로",
+      "rarity": 1,
+      "jobPools": [
+        3
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 2,
+              "target": 0
+            },
+            {
+              "type": 11,
+              "value": 0,
+              "target": 4,
+              "maxTargets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cash_out",
+      "cardName": "현금화",
+      "cardType": 1,
+      "description": "재화 1장 정산, +1 카드",
+      "rarity": 1,
+      "jobPools": [
+        3
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 6,
+              "value": 0,
+              "target": 3,
+              "maxTargets": 1
+            },
+            {
+              "type": 0,
+              "value": 1,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fortitude",
+      "cardName": "견고함",
+      "cardType": 1,
+      "description": "3턴간 매 턴 +2 골드",
+      "rarity": 2,
+      "jobPools": [
+        3
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 15,
+              "value": 2,
+              "target": 0,
+              "duration": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decree",
+      "cardName": "칙령",
+      "cardType": 1,
+      "description": "+1 카드, +1 액션, +3 골드",
+      "jobPools": [
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 2,
+              "value": 3,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "royal_patronage",
+      "cardName": "왕실 후원",
+      "cardType": 1,
+      "description": "+2 카드, +1 액션, 재화 +1등급",
+      "rarity": 1,
+      "jobPools": [
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 2,
+              "target": 0
+            },
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 4,
+              "value": 1,
+              "target": 3,
+              "maxTargets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coronation",
+      "cardName": "대관식",
+      "cardType": 1,
+      "description": "+3 카드, +2 액션, +5 골드",
+      "rarity": 1,
+      "jobPools": [
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 3,
+              "target": 0
+            },
+            {
+              "type": 1,
+              "value": 2,
+              "target": 0
+            },
+            {
+              "type": 2,
+              "value": 5,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kings_touch",
+      "cardName": "왕의 손길",
+      "cardType": 1,
+      "description": "카드 1장 소멸, +8 골드",
+      "rarity": 1,
+      "jobPools": [
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 9,
+              "value": 0,
+              "target": 2,
+              "maxTargets": 1
+            },
+            {
+              "type": 2,
+              "value": 8,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kingdoms_prosperity",
+      "cardName": "왕국의 번영",
+      "cardType": 1,
+      "description": "+2 카드, +1 액션, 골드 +30%",
+      "rarity": 2,
+      "jobPools": [
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 2,
+              "target": 0
+            },
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 7,
+              "value": 0,
+              "target": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 1.3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "queens_majesty",
+      "cardName": "여왕의 위엄",
+      "cardType": 1,
+      "description": "재화 모두 +1등급, +2 액션",
+      "rarity": 2,
+      "jobPools": [
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 4,
+              "value": 1,
+              "target": 6
+            },
+            {
+              "type": 1,
+              "value": 2,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "luck",
+      "cardName": "행운",
+      "cardType": 1,
+      "description": "+1 카드, +2 골드",
+      "jobPools": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 2,
+              "value": 2,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "market",
+      "cardName": "시장",
+      "cardType": 1,
+      "description": "+1 카드, +1 액션, +2 골드",
+      "rarity": 1,
+      "jobPools": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [],
+          "effects": [
+            {
+              "type": 0,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 1,
+              "value": 1,
+              "target": 0
+            },
+            {
+              "type": 2,
+              "value": 2,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liquidation",
+      "cardName": "청산",
+      "cardType": 1,
+      "description": "재화 모두 정산, +1 액션",
+      "rarity": 2,
+      "jobPools": [
+        0
+      ],
+      "effects": [
+        {
+          "conditions": [
+            {
+              "type": 0,
+              "comparison": 0,
+              "value": 0
+            }
+          ],
+          "effects": [
+            {
+              "type": 6,
+              "target": 6,
+              "value": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 1.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            {
+              "type": 1,
+              "target": 0,
+              "value": 1,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 1,
+                "multiplier": 1.0,
+                "min": 0,
+                "max": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grand_liquidation",
+      "cardName": "대청산",
+      "cardType": 1,
+      "description": "재화 모두 정산, 장수만큼 드로우",
+      "rarity": 2,
+      "jobPools": [
+        4
+      ],
+      "effects": [
+        {
+          "conditions": [
+            {
+              "type": 0,
+              "comparison": 0,
+              "value": 0
+            }
+          ],
+          "effects": [
+            {
+              "type": 6,
+              "target": 6,
+              "value": 0,
+              "dynamicValue": {
+                "source": 0,
+                "baseValue": 0,
+                "multiplier": 1.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            {
+              "type": 0,
+              "target": 0,
+              "value": 0,
+              "dynamicValue": {
+                "source": 10,
+                "baseValue": 0,
+                "multiplier": 1.0,
+                "min": 0,
+                "max": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

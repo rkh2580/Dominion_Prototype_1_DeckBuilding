@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11abdabb3e425da4faeb76b40943fda4, type: 3}
+  m_Name: Rook
+  m_EditorClassIdentifier: Assembly-CSharp::DeckBuildingEconomy.Data.JobSO
+  id: Rook
+  job: 3
+  displayName: "\uB8E9"
+  description: "\uBC29\uC5B4/\uC548\uC815 \uD2B9\uD654. \uAFB8\uC900\uD55C \uC218\uC785\uACFC
+    \uBC29\uC5B4\uB97C \uB2F4\uB2F9\uD55C\uB2E4."
+  baseCombatPower: 25
+  startingCards:
+  - stockpile
+  cardPools:
+    basic:
+    - stockpile
+    - fortify
+    - patrol
+    advanced:
+    - liquidate
+    - barricade
+    rare:
+    - fortress

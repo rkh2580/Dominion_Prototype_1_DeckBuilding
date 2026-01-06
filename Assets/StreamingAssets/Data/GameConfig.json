@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  
+  "game": {
+    "maxTurns": 60,
+    "startingGold": 10,
+    "handSize": 5,
+    "maxHandSize": 10,
+    "startingActions": 1,
+    "maxHouses": 12
+  },
+  
+  "validation": {
+    "turns": [10, 20, 30, 40, 50],
+    "goldRequired": [40, 100, 200, 350, 500]
+  },
+  
+  "raid": {
+    "turns": [8, 16, 24, 32, 40, 48, 56],
+    "enemyPowerBase": 10,
+    "enemyPowerPerTurn": 3,
+    "finalBattleTurn": 60,
+    "finalBattleRequiredPower": 500
+  },
+  
+  "loyalty": {
+    "childDefault": 50,
+    "adultDefault": 100,
+    "deficitPenalty": -20,
+    "surplusBonus": 10
+  },
+  
+  "breeding": {
+    "pregnancyDuration": 3,
+    "fertilityChance": [20, 40, 60, 80, 100]
+  },
+  
+  "promotion": {
+    "costs": [10, 25, 50],
+    "maxLevel": 3
+  },
+  
+  "land": {
+    "developCosts": [15, 30, 60]
+  },
+  
+  "eventConfig": {
+    "triggerChance": 80,
+    "positiveRatio": 50,
+    "negativeRatio": 20,
+    "choiceRatio": 30
+  },
+  
+  "promotionJobChance": {
+    "Knight": 30,
+    "Bishop": 30,
+    "Rook": 30,
+    "Queen": 10
+  },
+  
+  "cardRarityChance": {
+    "Basic": 60,
+    "Advanced": 35,
+    "Rare": 5
+  },
+  
+  "combat": {
+    "jobBasePower": {
+      "Pawn": 10,
+      "Knight": 30,
+      "Bishop": 15,
+      "Rook": 25,
+      "Queen": 35
+    },
+    "promotionBonusPerLevel": 10,
+    "oldAgeMultiplier": 0.75
+  },
+  
+  "growth": {
+    "childDuration": 3,
+    "youngDuration": 10,
+    "middleDuration": 10,
+    "oldBaseDuration": 5,
+    "middleBreedableRemainingTurns": 5,
+    "oldAgeDeathChance": {
+      "turn6": 20,
+      "turn7": 40,
+      "turn8": 60,
+      "turn9": 80,
+      "turn10Plus": 100
+    }
+  }
+}

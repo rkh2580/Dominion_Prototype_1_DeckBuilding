@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+
+  "grades": [
+    {
+      "level": 1,
+      "id": "copper",
+      "enumValue": 1,
+      "name": "동화",
+      "goldValue": 1,
+      "color": "#CD7F32"
+    },
+    {
+      "level": 2,
+      "id": "silver",
+      "enumValue": 2,
+      "name": "은화",
+      "goldValue": 2,
+      "color": "#C0C0C0"
+    },
+    {
+      "level": 3,
+      "id": "gold_coin",
+      "enumValue": 3,
+      "name": "금화",
+      "goldValue": 4,
+      "color": "#FFD700"
+    },
+    {
+      "level": 4,
+      "id": "emerald",
+      "enumValue": 4,
+      "name": "에메랄드",
+      "goldValue": 7,
+      "color": "#50C878"
+    },
+    {
+      "level": 5,
+      "id": "sapphire",
+      "enumValue": 5,
+      "name": "사파이어",
+      "goldValue": 12,
+      "color": "#0F52BA"
+    },
+    {
+      "level": 6,
+      "id": "ruby",
+      "enumValue": 6,
+      "name": "루비",
+      "goldValue": 20,
+      "color": "#E0115F"
+    },
+    {
+      "level": 7,
+      "id": "diamond",
+      "enumValue": 7,
+      "name": "다이아몬드",
+      "goldValue": 35,
+      "color": "#B9F2FF"
+    }
+  ],
+
+  "upgradeChain": [ "copper", "silver", "gold_coin", "emerald", "sapphire", "ruby", "diamond" ]
+}

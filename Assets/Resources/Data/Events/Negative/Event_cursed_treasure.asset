@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222b622c22309ca4baff3e0ff19c4fc0, type: 3}
+  m_Name: Event_cursed_treasure
+  m_EditorClassIdentifier: Assembly-CSharp::DeckBuildingEconomy.Data.EventSO
+  eventId: cursed_treasure
+  eventName: "\uC800\uC8FC\uBC1B\uC740 \uBCF4\uBB3C"
+  category: 2
+  description: "\uC800\uC8FC\uBC1B\uC740 \uBCF4\uBB3C\uC744 \uC8FC\uC6E0\uC2B5\uB2C8\uB2E4.
+    +5 \uACE8\uB4DC, \"\uC800\uC8FC\" \uCE74\uB4DC 1\uC7A5 \uCD94\uAC00."
+  triggerConditions: []
+  effects:
+  - conditions: []
+    effects:
+    - type: 2
+      value: 5
+      dynamicValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      target: 0
+      maxTargets: 0
+      createGrade: 0
+      duration: 0
+      successChance: 0
+      successValueInt: 0
+      successValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      failValueInt: 0
+      failValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      cardId: 
+      cardRarity: 0
+      cardJobPool: 0
+    - type: 54
+      value: 1
+      dynamicValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      target: 0
+      maxTargets: 0
+      createGrade: 0
+      duration: 0
+      successChance: 0
+      successValueInt: 0
+      successValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      failValueInt: 0
+      failValue:
+        source: 0
+        baseValue: 0
+        multiplier: 1
+        min: 0
+        max: 0
+      cardId: curse
+      cardRarity: 0
+      cardJobPool: 0
+    elseEffects: []
+  choices: []

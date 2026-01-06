@@ -1,0 +1,441 @@
+{
+  "_version": "2.2",
+  "_description": "Excel에서 변환됨 - 이벤트 시스템 (Gamble/duration 파라미터 수정)",
+  "events": [
+    {
+      "eventId": "good_harvest",
+      "eventName": "풍년",
+      "category": 1,
+      "description": "올해는 풍년입니다! 즉시 10 골드를 획득합니다.",
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 2,
+              "value": 10,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "cleansing_wind",
+      "eventName": "정화의 바람",
+      "category": 1,
+      "description": "맑은 바람이 불어옵니다. 덱의 오염 카드 1장이 사라집니다.",
+      "triggerConditions": [
+        {
+          "type": 61,
+          "comparison": 0,
+          "value": 1
+        }
+      ],
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 55,
+              "value": 1,
+              "target": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "merchant_visit",
+      "eventName": "행상인 방문",
+      "category": 1,
+      "description": "행상인이 마을을 방문했습니다. 이번 턴 전직 비용이 50% 할인됩니다.",
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 58,
+              "value": 50,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "inspiration",
+      "eventName": "영감",
+      "category": 1,
+      "description": "신의 계시! 랜덤 유닛 1명이 무료 전직 기회를 얻습니다.",
+      "triggerConditions": [
+        {
+          "type": 32,
+          "comparison": 0,
+          "value": 1
+        }
+      ],
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 52,
+              "value": 1,
+              "target": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "hidden_treasure",
+      "eventName": "숨겨진 보물",
+      "category": 1,
+      "description": "숨겨진 보물을 발견! \"행운\" 카드 1장을 덱에 추가합니다.",
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 54,
+              "value": 1,
+              "target": 0,
+              "cardId": "luck"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "artisan_blessing",
+      "eventName": "장인의 축복",
+      "category": 1,
+      "description": "장인이 동화 1장을 은화로 업그레이드해 줍니다.",
+      "triggerConditions": [
+        {
+          "type": 60,
+          "comparison": 0,
+          "value": 1
+        }
+      ],
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 56,
+              "value": 1,
+              "target": 9,
+              "cardId": "copper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "bandit_raid",
+      "eventName": "도적 습격",
+      "category": 2,
+      "description": "도적들이 습격했습니다! 보유 골드의 20%를 잃습니다.",
+      "triggerConditions": [
+        {
+          "type": 1,
+          "comparison": 4,
+          "value": 5
+        }
+      ],
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 57,
+              "value": 20,
+              "target": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "plague",
+      "eventName": "역병",
+      "category": 2,
+      "description": "전염병이 퍼집니다. \"질병\" 카드 1장이 덱에 추가됩니다.",
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 54,
+              "value": 1,
+              "target": 0,
+              "cardId": "disease"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "cursed_treasure",
+      "eventName": "저주받은 보물",
+      "category": 2,
+      "description": "저주받은 보물을 주웠습니다. +5 골드, \"저주\" 카드 1장 추가.",
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 2,
+              "value": 5,
+              "target": 0
+            },
+            {
+              "type": 54,
+              "value": 1,
+              "target": 0,
+              "cardId": "curse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "equipment_damage",
+      "eventName": "장비 파손",
+      "category": 2,
+      "description": "장비가 파손되었습니다. \"파손\" 카드 1장이 덱에 추가됩니다.",
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 54,
+              "value": 1,
+              "target": 0,
+              "cardId": "damage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "debt_collector",
+      "eventName": "빚쟁이",
+      "category": 2,
+      "description": "빚쟁이가 찾아왔습니다. \"부채\" 카드 1장이 덱에 추가됩니다.",
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 54,
+              "value": 1,
+              "target": 0,
+              "cardId": "debt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "famine",
+      "eventName": "흉년",
+      "category": 2,
+      "description": "올해는 흉년입니다. 3턴간 유지비가 2 증가합니다.",
+      "effects": [
+        {
+          "conditions": null,
+          "effects": [
+            {
+              "type": 59,
+              "value": 2,
+              "target": 0,
+              "duration": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventId": "shady_merchant",
+      "eventName": "수상한 상인",
+      "category": 3,
+      "description": "수상한 상인이 거래를 제안합니다.",
+      "choices": [
+        {
+          "choiceId": "choice1",
+          "choiceText": "거래한다 (+20 골드, 저주 1장)",
+          "effects": [
+            {
+              "conditions": null,
+              "effects": [
+                {
+                  "type": 2,
+                  "value": 20,
+                  "target": 0
+                },
+                {
+                  "type": 54,
+                  "value": 1,
+                  "target": 0,
+                  "cardId": "curse"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "choiceId": "choice2",
+          "choiceText": "거절한다"
+        }
+      ]
+    },
+    {
+      "eventId": "adventurer_offer",
+      "eventName": "모험가의 제안",
+      "category": 3,
+      "description": "모험가가 탐험을 제안합니다. 위험하지만 보상이 클 수도...",
+      "choices": [
+        {
+          "choiceId": "choice1",
+          "choiceText": "도전한다 (50% +30골드 / 50% -15골드)",
+          "effects": [
+            {
+              "conditions": null,
+              "effects": [
+                {
+                  "type": 12,
+                  "value": 0,
+                  "target": 0,
+                  "successChance": 50,
+                  "successValueInt": 30,
+                  "failValueInt": -15
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "choiceId": "choice2",
+          "choiceText": "거절한다"
+        }
+      ]
+    },
+    {
+      "eventId": "old_sage",
+      "eventName": "늙은 현자",
+      "category": 3,
+      "description": "현자가 정화 의식을 제안합니다.",
+      "triggerConditions": [
+        {
+          "type": 61,
+          "comparison": 0,
+          "value": 1
+        }
+      ],
+      "choices": [
+        {
+          "choiceId": "choice1",
+          "choiceText": "의식을 치른다 (-30 골드, 오염 2장 제거)",
+          "effects": [
+            {
+              "conditions": null,
+              "effects": [
+                {
+                  "type": 2,
+                  "value": -30,
+                  "target": 0
+                },
+                {
+                  "type": 55,
+                  "value": 2,
+                  "target": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "choiceId": "choice2",
+          "choiceText": "거절한다"
+        }
+      ]
+    },
+    {
+      "eventId": "wandering_knight",
+      "eventName": "떠돌이 기사",
+      "category": 3,
+      "description": "떠돌이 기사가 합류를 원합니다.",
+      "choices": [
+        {
+          "choiceId": "choice1",
+          "choiceText": "영입한다 (-25 골드, 나이트 유닛 획득)",
+          "effects": [
+            {
+              "conditions": null,
+              "effects": [
+                {
+                  "type": 2,
+                  "value": -25,
+                  "target": 0
+                },
+                {
+                  "type": 50,
+                  "value": 1,
+                  "target": 0,
+                  "cardId": "knight"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "choiceId": "choice2",
+          "choiceText": "거절한다"
+        }
+      ]
+    },
+    {
+      "eventId": "mystic_altar",
+      "eventName": "신비한 제단",
+      "category": 3,
+      "description": "신비한 제단을 발견했습니다. 희생을 요구합니다.",
+      "triggerConditions": [
+        {
+          "type": 31,
+          "comparison": 4,
+          "value": 2
+        }
+      ],
+      "choices": [
+        {
+          "choiceId": "choice1",
+          "choiceText": "유닛 1명을 희생한다 (다른 유닛 +2 전직 레벨)",
+          "effects": [
+            {
+              "conditions": null,
+              "effects": [
+                {
+                  "type": 51,
+                  "value": 1,
+                  "target": 9
+                },
+                {
+                  "type": 53,
+                  "value": 2,
+                  "target": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "choiceId": "choice2",
+          "choiceText": "지나친다"
+        }
+      ]
+    }
+  ]
+}

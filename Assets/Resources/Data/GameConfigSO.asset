@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9470a83b7013c7c4d995d2a97c858228, type: 3}
+  m_Name: GameConfigSO
+  m_EditorClassIdentifier: Assembly-CSharp::DeckBuildingEconomy.Data.GameConfigSO
+  version: 1.0.0
+  game:
+    maxTurns: 60
+    startingGold: 10
+    handSize: 5
+    maxHandSize: 10
+    startingActions: 1
+    maxHouses: 12
+  validation:
+    turns: 0a000000140000001e0000002800000032000000
+    goldRequired: 2800000064000000c80000005e010000f4010000
+  raid:
+    turns: 08000000100000001800000020000000280000003000000038000000
+    enemyPowerBase: 10
+    enemyPowerPerTurn: 3
+    finalBattleTurn: 60
+    finalBattleRequiredPower: 500
+  loyalty:
+    childDefault: 50
+    adultDefault: 100
+    deficitPenalty: -20
+    surplusBonus: 10
+  breeding:
+    pregnancyDuration: 3
+    fertilityChance: 14000000280000003c0000005000000064000000
+  promotion:
+    costs: 0a0000001900000032000000
+    maxLevel: 3
+  land:
+    developCosts: 0f0000001e0000003c000000
+  eventConfig:
+    triggerChance: 80
+    positiveRatio: 50
+    negativeRatio: 20
+    choiceRatio: 30
+  promotionJobChance:
+    Knight: 30
+    Bishop: 30
+    Rook: 30
+    Queen: 10
+  cardRarityChance:
+    Basic: 60
+    Advanced: 35
+    Rare: 5
+  combat:
+    pawnPower: 10
+    knightPower: 30
+    bishopPower: 15
+    rookPower: 25
+    queenPower: 35
+    promotionBonusPerLevel: 10
+    oldAgeMultiplier: 0.75
+  growth:
+    childDuration: 3
+    youngDuration: 10
+    middleDuration: 10
+    oldBaseDuration: 5
+    middleBreedableRemainingTurns: 5
+    deathChanceTurn6: 20
+    deathChanceTurn7: 40
+    deathChanceTurn8: 60
+    deathChanceTurn9: 80
+    deathChanceTurn10Plus: 100

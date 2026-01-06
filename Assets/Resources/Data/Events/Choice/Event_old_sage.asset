@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222b622c22309ca4baff3e0ff19c4fc0, type: 3}
+  m_Name: Event_old_sage
+  m_EditorClassIdentifier: Assembly-CSharp::DeckBuildingEconomy.Data.EventSO
+  eventId: old_sage
+  eventName: "\uB299\uC740 \uD604\uC790"
+  category: 3
+  description: "\uD604\uC790\uAC00 \uC815\uD654 \uC758\uC2DD\uC744 \uC81C\uC548\uD569\uB2C8\uB2E4."
+  triggerConditions:
+  - type: 61
+    comparison: 0
+    value: 1
+  effects: []
+  choices:
+  - choiceId: choice1
+    choiceText: "\uC758\uC2DD\uC744 \uCE58\uB978\uB2E4 (-30 \uACE8\uB4DC, \uC624\uC5FC
+      2\uC7A5 \uC81C\uAC70)"
+    requirements: []
+    effects:
+    - conditions: []
+      effects:
+      - type: 2
+        value: -30
+        dynamicValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        target: 0
+        maxTargets: 0
+        createGrade: 0
+        duration: 0
+        successChance: 0
+        successValueInt: 0
+        successValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        failValueInt: 0
+        failValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        cardId: 
+        cardRarity: 0
+        cardJobPool: 0
+      - type: 55
+        value: 2
+        dynamicValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        target: 9
+        maxTargets: 0
+        createGrade: 0
+        duration: 0
+        successChance: 0
+        successValueInt: 0
+        successValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        failValueInt: 0
+        failValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        cardId: 
+        cardRarity: 0
+        cardJobPool: 0
+      elseEffects: []
+  - choiceId: choice2
+    choiceText: "\uAC70\uC808\uD55C\uB2E4"
+    requirements: []
+    effects: []

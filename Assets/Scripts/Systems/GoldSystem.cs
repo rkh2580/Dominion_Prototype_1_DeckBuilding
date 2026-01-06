@@ -2,6 +2,10 @@
 // GoldSystem.cs
 // 골드 관리 시스템
 // =============================================================================
+// [E5 수정] 2026-01-06
+// - D5: 사유지 골드 보너스 적용 (LandSystem.GetTotalGoldBonusPercent)
+// - AddGold()에서 사유지 보너스 자동 반영
+// =============================================================================
 
 using System;
 using UnityEngine;
@@ -13,6 +17,7 @@ namespace DeckBuildingEconomy.Core
     /// 골드 시스템 (싱글톤)
     /// - 골드 추가/차감
     /// - 배수/보너스 적용
+    /// - 사유지 골드 보너스 적용
     /// - 골드 계산
     /// </summary>
     public class GoldSystem : MonoBehaviour
@@ -41,6 +46,11 @@ namespace DeckBuildingEconomy.Core
         public float GoldMultiplier => State?.goldMultiplier ?? 1f;
         public int GoldBonus => State?.goldBonus ?? 0;
 
+        /// <summary>
+        /// [E5 추가] 현재 사유지 골드 보너스 퍼센트
+        /// </summary>
+        public int LandGoldBonusPercent => LandSystem.Instance?.GetTotalGoldBonusPercent() ?? 0;
+
         // =====================================================================
         // Unity 생명주기
         // =====================================================================
@@ -62,32 +72,54 @@ namespace DeckBuildingEconomy.Core
         // =====================================================================
 
         /// <summary>
-        /// 골드 추가 (배수/보너스 적용)
+        /// 골드 추가 (배수/보너스/사유지 보너스 적용)
+        /// 
+        /// 적용 순서:
+        /// 1. 기본 골드
+        /// 2. × goldMultiplier (투자, 황금기 등)
+        /// 3. + goldBonus (고정 보너스)
+        /// 4. × (1 + 사유지보너스%) [E5 추가]
         /// </summary>
         /// <param name="baseAmount">기본 골드량</param>
-        /// <param name="applyMultiplier">배수 적용 여부 (기본 true)</param>
+        /// <param name="applyMultiplier">배수/보너스 적용 여부 (기본 true)</param>
         public void AddGold(int baseAmount, bool applyMultiplier = true)
         {
             if (State == null) return;
 
             int finalAmount = baseAmount;
 
-            // 배수 적용 (투자, 황금기 등)
-            if (applyMultiplier && State.goldMultiplier != 1f)
+            if (applyMultiplier)
             {
-                finalAmount = Mathf.FloorToInt(finalAmount * State.goldMultiplier);
-            }
+                // 1. 배수 적용 (투자, 황금기 등)
+                if (State.goldMultiplier != 1f)
+                {
+                    finalAmount = Mathf.FloorToInt(finalAmount * State.goldMultiplier);
+                }
 
-            // 보너스 적용
-            if (applyMultiplier && State.goldBonus > 0)
-            {
-                finalAmount += State.goldBonus;
+                // 2. 고정 보너스 적용
+                if (State.goldBonus > 0)
+                {
+                    finalAmount += State.goldBonus;
+                }
+
+                // 3. [E5 추가] 사유지 골드 보너스 적용
+                int landBonusPercent = LandSystem.Instance?.GetTotalGoldBonusPercent() ?? 0;
+                if (landBonusPercent > 0)
+                {
+                    int landBonus = Mathf.FloorToInt(finalAmount * landBonusPercent / 100f);
+                    finalAmount += landBonus;
+                    Debug.Log($"[GoldSystem] 사유지 보너스: +{landBonusPercent}% = +{landBonus} 골드");
+                }
             }
 
             int oldGold = State.gold;
             State.gold += finalAmount;
 
-            Debug.Log($"[GoldSystem] +{finalAmount} 골드 (기본 {baseAmount}, 배수 {State.goldMultiplier}x) → 현재 {State.gold}");
+            // 로그 출력 (사유지 보너스 포함)
+            int landPercent = applyMultiplier ? (LandSystem.Instance?.GetTotalGoldBonusPercent() ?? 0) : 0;
+            string landInfo = landPercent > 0 ? $", 사유지 +{landPercent}%" : "";
+            Debug.Log($"[GoldSystem] +{finalAmount} 골드 (기본 {baseAmount}, 배수 {State.goldMultiplier}x{landInfo}) → 현재 {State.gold}");
+
             OnGoldChanged?.Invoke(oldGold, State.gold, finalAmount);
 
             // 골드 변경 후 승패 체크
@@ -211,6 +243,38 @@ namespace DeckBuildingEconomy.Core
         public int CalculatePercentage(int baseAmount, int percentage)
         {
             return Mathf.FloorToInt(baseAmount * percentage / 100f);
+        }
+
+        /// <summary>
+        /// [E5 추가] 예상 골드 획득량 계산 (UI 표시용)
+        /// 현재 배수/보너스/사유지 보너스 적용 시 실제 획득량 계산
+        /// </summary>
+        public int CalculateExpectedGold(int baseAmount)
+        {
+            if (State == null) return baseAmount;
+
+            int result = baseAmount;
+
+            // 1. 배수 적용
+            if (State.goldMultiplier != 1f)
+            {
+                result = Mathf.FloorToInt(result * State.goldMultiplier);
+            }
+
+            // 2. 고정 보너스 적용
+            if (State.goldBonus > 0)
+            {
+                result += State.goldBonus;
+            }
+
+            // 3. 사유지 보너스 적용
+            int landBonusPercent = LandSystem.Instance?.GetTotalGoldBonusPercent() ?? 0;
+            if (landBonusPercent > 0)
+            {
+                result += Mathf.FloorToInt(result * landBonusPercent / 100f);
+            }
+
+            return result;
         }
     }
 }

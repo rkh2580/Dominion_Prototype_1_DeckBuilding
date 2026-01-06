@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222b622c22309ca4baff3e0ff19c4fc0, type: 3}
+  m_Name: Event_mystic_altar
+  m_EditorClassIdentifier: Assembly-CSharp::DeckBuildingEconomy.Data.EventSO
+  eventId: mystic_altar
+  eventName: "\uC2E0\uBE44\uD55C \uC81C\uB2E8"
+  category: 3
+  description: "\uC2E0\uBE44\uD55C \uC81C\uB2E8\uC744 \uBC1C\uACAC\uD588\uC2B5\uB2C8\uB2E4.
+    \uD76C\uC0DD\uC744 \uC694\uAD6C\uD569\uB2C8\uB2E4."
+  triggerConditions:
+  - type: 31
+    comparison: 4
+    value: 2
+  effects: []
+  choices:
+  - choiceId: choice1
+    choiceText: "\uC720\uB2DB 1\uBA85\uC744 \uD76C\uC0DD\uD55C\uB2E4 (\uB2E4\uB978
+      \uC720\uB2DB +2 \uC804\uC9C1 \uB808\uBCA8)"
+    requirements: []
+    effects:
+    - conditions: []
+      effects:
+      - type: 51
+        value: 1
+        dynamicValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        target: 9
+        maxTargets: 0
+        createGrade: 0
+        duration: 0
+        successChance: 0
+        successValueInt: 0
+        successValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        failValueInt: 0
+        failValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        cardId: 
+        cardRarity: 0
+        cardJobPool: 0
+      - type: 53
+        value: 2
+        dynamicValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        target: 9
+        maxTargets: 0
+        createGrade: 0
+        duration: 0
+        successChance: 0
+        successValueInt: 0
+        successValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        failValueInt: 0
+        failValue:
+          source: 0
+          baseValue: 0
+          multiplier: 1
+          min: 0
+          max: 0
+        cardId: 
+        cardRarity: 0
+        cardJobPool: 0
+      elseEffects: []
+  - choiceId: choice2
+    choiceText: "\uC9C0\uB098\uCE5C\uB2E4"
+    requirements: []
+    effects: []
